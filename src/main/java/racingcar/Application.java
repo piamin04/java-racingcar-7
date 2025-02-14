@@ -38,7 +38,11 @@ public class Application {
         //자동차 생성 및 이름 리스트로 저장
         List<String> carNames = Car.cut(input);
 
-        // 테스트 출력
-        System.out.println(carNames);
+        //시도할 횟수 받기
+        int number = Integer.parseInt(Console.readLine());
+        if(number<1){ //횟수가 0이거나 음수일 수 없음
+            throw new IllegalArgumentException("error");
+        }
+
     }
 }
